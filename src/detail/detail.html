@@ -1,0 +1,22 @@
+<section class ="section-container md-whiteframe-z1">
+<div layout ="row" style ="margin-top:20px; margin-left:20px;margin-bottom:20px" flex>
+	<img ng-src={{data.image}}  class="md-card-image" height="300" width="300" flex='30'>
+	<div layout ='column' style="padding: 100px 20px 20px 20px">
+		<span class="md-headline"><strong>{{data.Title}}</strong></span>
+		<span class="md-subhead">{{data.Description}}</span>
+	</div>
+</div>
+	<h4>Chapter: {{data['chapter']['chapter name']}}</h4>
+	<ng-gallery images="pages" thumbs-num="5"></ng-gallery>
+</section>
+
+<style>
+    .section-container{
+        border-radius: 4px;
+        margin: 20px 20px 20px 20px;
+        -webkit-transition: 0.02s padding cubic-bezier(0.35, 0, 0.25, 1);
+        transition: 0.02s padding cubic-bezier(0.35, 0, 0.25, 1);
+        position: relative;
+        padding: 10px 10px 10px 10px;
+    }
+</style>

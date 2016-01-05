@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app = 'sampleModule'>
+	<head>
+		  <title>Simple Manga</title>
+		  <base href='/'>
+		  <link rel='stylesheet' href='bootstrap.min.css'/>
+		  <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+		  <link rel="stylesheet" type="text/css" href="bower_components/angular-ui-grid/ui-grid.css"/>
+		  <link rel="stylesheet" type="text/css" href="bower_components/ngGallery/src/css/ngGallery.css">
+		  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<md-toolbar style="height:100px;margin-top:20px;background-color:Black">
+			<div class="md-toolbar-tools" layout="row" flex='100'>
+			<div flex='60'>
+				<img ng-src='http://2.bp.blogspot.com/-b6-u1b94vek/UeA852FhWRI/AAAAAAAAAVI/D1koo4ZyUZQ/s1600/imagesmanga.jpg'  class="md-card-image" flex='25'>
+			</div>	
+				<img ng-src='https://soradanza.files.wordpress.com/2015/09/cropped-save.png?w=700'  class="md-card-image">
+			</div>
+		</md-toolbar>
+		<div class = 'row'>
+			<div class='row-sm-12' ng-view></div>
+		</div>
+		  <script  src='bower_components/jquery/dist/jquery.min.js'></script>
+		  <script  src='bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
+		  <script  src='bower_components/angular/angular.min.js'></script>
+		  <script  src='bower_components/angular-route/angular-route.min.js'></script>
+		  <script  src="bower_components/angular/angular.js"></script>
+		  <script  src="bower_components/angular-ui-grid/ui-grid.js"></script>
+		  <script  src="bower_components/angular-aria/angular-aria.js"></script>
+		  <script  src="bower_components/angular-animate/angular-animate.js"></script>
+          <script  src="bower_components/angular-material/angular-material.js"></script>
+		  <script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+		  <script  src="bower_components/ngGallery/src/js/ngGallery.js"></script>
+		  <script  src = 'app.js'></script>
+		  <script  src = 'list/listCtrl.js'></script>
+		  <script  src = 'detail/detailCtrl.js'></script>
+	</body>
+</html>
+<style>
+	body{
+		padding: 15px 15px 15px 15px;
+	}
+</style>
