@@ -12,6 +12,12 @@ angular.module('sampleModule',['ngRoute','ngMaterial', 'ui.grid','jkuri.gallery'
 			.otherwise({ redirectTo: '/list' });
 		$locationProvider.html5Mode(true);
 	})
+	.controller('mainCtrl',['$scope','$location',function($scope,$location){
+		$scope.relocate = function(){
+			console.log("Here");
+			$location.path('/list');
+		};
+	}])
 	.factory('dataService',function(){
 		var data = [
 					{'image':'http://images.designntrend.com/data/images/full/72810/one-punch-man.jpg?w=780',
