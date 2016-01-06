@@ -4,11 +4,11 @@ angular.module('sampleModule')
                     enableColumnMenus: false,
                     showTreeRowHeader: false,
                     enableSorting: false,
-					rowHeight:175,
+					rowHeight:220,
 					showHeader: false,
                     columnDefs: [
-                        { field: 'image',displayName:'Item',width:180, enableHiding: false,cellTemplate:'<md-card style="padding: 5px 5px 5px 5px;"><img ng-src={{row.entity.image}}  class="md-card-image" height="100" width="100"></md-card>'},
-                        { field: 'Description',cellTemplate:'<div layout="column" class="cell"><span class="md-headline"><strong>{{row.entity.Title}}</strong></span><span class="md-subhead"><strong>Price</strong>: ${{row.entity.price}}</span><span class="md-subhead"><strong>Description</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp{{grid.appScope.limitSummary(row.entity.Description,3) +"..."}}</span><div><md-button ng-click="grid.appScope.onDetail(row)">Read Current Chapter</md-button></div></div>'}
+                        { field: 'image',displayName:'Item',width:180, enableHiding: false,cellTemplate:'<div layout="column"><div><md-card><img ng-src={{row.entity.image}}  class="md-card-image" height="100" width="100"></md-card></div><div><md-button class="md-primary" ng-click="grid.appScope.onDetail(row)">Read Latest Chapter</md-button></div></div>'},
+                        { field: 'Description',cellTemplate:'<div layout="column" class="cell" flex="80"><span class="md-headline"><strong>{{row.entity.Title}}</strong></span><span class="md-subhead"><strong>Price</strong>: ${{row.entity.price}}</span><span class="md-subhead"><strong>Description</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp{{grid.appScope.limitSummary(row.entity.Description,2) +"..."}}</span></div>'}
                     ],
                     data:dataService.getAllData()
                 };
