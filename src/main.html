@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app = 'sampleModule'>
+<html ng-app = 'sampleModule' ng-controller="mainCtrl">
 	<head>
 		  <title>Simple Manga</title>
 		  <base href='/'>
@@ -10,7 +10,7 @@
 		  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	</head>
 	<body>
-		<md-toolbar style="height:100px;margin-top:20px;background-color:Black">
+		<md-toolbar style="height:100px;margin-top:20px;background-color:Black" ng-click="relocate()">
 			<div class="md-toolbar-tools" layout="row" flex='100'>
 			<div flex='60'>
 				<img ng-src='http://2.bp.blogspot.com/-b6-u1b94vek/UeA852FhWRI/AAAAAAAAAVI/D1koo4ZyUZQ/s1600/imagesmanga.jpg'  class="md-card-image" flex='25'>
@@ -40,5 +40,8 @@
 <style>
 	body{
 		padding: 15px 15px 15px 15px;
+	}
+	*:focus {
+    outline: 0 !important;
 	}
 </style>
